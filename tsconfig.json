@@ -3,7 +3,7 @@
       "sourceMap": true,
       "rootDir": "src",
       "baseUrl": "src",
-      "target": "ES6",
+      "target": "ES2017",
       "module": "commonjs",
       "esModuleInterop": true,
       "outDir": "dist",
