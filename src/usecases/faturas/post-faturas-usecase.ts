@@ -13,3 +13,4 @@ export class PostFaturaUseCase implements UsecaseInterface{
         return Promise.resolve(fatura)
     }
 }
+
