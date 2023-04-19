@@ -8,6 +8,6 @@ module.exports = {
   ],
   moduleFileExtensions: ['js', 'jsx', 'json', 'ts', 'tsx'],
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
-  },
+    "^.+\\.js$": "babel-jest"
+  }
 };
