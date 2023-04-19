@@ -1,6 +1,9 @@
 {
     "compilerOptions": {
-      "target": "ES5",
+      "sourceMap": true,
+      "rootDir": "src",
+      "baseUrl": "src",
+      "target": "ES6",
       "module": "commonjs",
       "esModuleInterop": true,
       "outDir": "dist",
