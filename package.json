@@ -28,9 +28,9 @@
   "scripts": {
     "test": "jest",
     "test:verbose": "jest --passWithNoTests --runInBand",
-    "test:unit": "npm test -- --watch -c jest-unit-config.cjs",
-    "test:unit-verb": "npm test -- --watch -c jest-unit-config.cjs --verbose --silent=false",
-    "test:integration": "npm test -- --watch -c jest-integration-config.cjs",
+    "test:unit": "npm test -- --watchAll -c jest-unit-config.cjs",
+    "test:unit-verb": "npm test -- --watchAll -c jest-unit-config.cjs --verbose --silent=false",
+    "test:integration": "npm test -- --watchAll -c jest-integration-config.cjs",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
     "db:generate": "cd node_modules/.prisma && prisma generate",
