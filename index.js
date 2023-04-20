@@ -4,4 +4,3 @@ connection.connect((err) => {
   if (err) throw err;
   console.log('Conexão bem sucedida!');
 });
-

@@ -19,14 +19,14 @@ describe('PostFaturasUsecase', ()=>{
     test('Deve retornar os dados de uma fatura criada corretamente', async()=>{
 
         class PostFaturaRepositoryStub implements PostFaturasRepositoryInterface {
-            save(): Promise<FaturasModel> {
+            create(): Promise<FaturasModel> {
               return Promise.resolve(faturasModel());
             }
           }
 
         const postFaturasRepositoryStub = new PostFaturaRepositoryStub()
         const sut = new PostFaturaUseCase(postFaturasRepositoryStub)
-        const spy = jest.spyOn(postFaturasRepositoryStub, 'save')
+        const spy = jest.spyOn(postFaturasRepositoryStub, 'create')
         await sut.execute({
             mes_fatura: "Janeiro",
             banco: Bancos.NUBANK,

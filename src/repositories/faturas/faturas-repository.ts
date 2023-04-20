@@ -1,6 +1,6 @@
-import { FaturasModel, Prisma } from "@prisma/client";
+import { FaturasModel} from "@prisma/client";
 import { PostFaturasRepositoryInterface } from "interfaces/repositories/post-faturas-repository-interface";
-import DB from "../../../src/prisma/index"
+const DB = require('../../prisma/index')
 
 export class FaturasRepository implements PostFaturasRepositoryInterface{
     
