@@ -1,6 +1,6 @@
 import { FaturasModel } from "@prisma/client";
-import { UsecaseInterface } from "../../interfaces/usecases/usecase-interface";
-import { PostFaturasRepositoryInterface } from "../../interfaces/repositories/faturas/post-faturas-repository-interface";
+import { UsecaseInterface } from "../../../interfaces/usecases/usecase-interface";
+import { PostFaturasRepositoryInterface } from "../../../interfaces/repositories/post-faturas-repository-interface";
 
 export class PostFaturaUseCase implements UsecaseInterface{
 
@@ -9,7 +9,7 @@ export class PostFaturaUseCase implements UsecaseInterface{
     }
 
     async execute(data: Omit<FaturasModel, 'id'>): Promise<any>{
-        const fatura = await this.faturaRepository.save(data)
+        const fatura = await this.faturaRepository.create(data)
         return Promise.resolve(fatura)
     }
 }

@@ -1,0 +1,52 @@
+CRUD FaturasModel
+    - id                    Int    @id @default(autoincrement())
+    - mes_fatura            String
+    - banco                 Bancos enum {NUBANK, C6, INTER, BANCO_DO_BRASIL, ITAU, BRADESCO, SANTANDER}
+    - dia_do_fechamento     DateTime
+    - dia_do_vencimento     DateTime
+
+
+    - POST /faturas
+    - GET /faturas
+    - GET /faturas/{id}
+    - PUT /faturas/{id}
+
+CRUD ReceitasModel
+    - id                    Int @id @default (autoincrement())
+    - data_entrada          Datetime
+    - valor_entrada         Int
+    - tipo_receita          TipoReceita enum{TRABALHO, FREELANCER, EXTRA}
+    - descricao_receita     String
+    - total_receita         Int
+
+    - POST /receitas
+    - GET /receitas
+    - GET /receitas/{id}
+    - PUT /receitas/{id}
+
+CRUD DespezasModel
+    - id                  Int @id @default (autoincrement())
+    - data_saida          Datetime
+    - valor_saida         Int
+    - tipo_custo          TipoCusto enum{CUSTO FIXO, CUSTO VARIAVEL}
+    - descricao_custo     String
+    - total_custo         Int
+
+
+    - POST /despezas
+    - GET /despezas
+    - GET /despezas/{id}
+    - PUT /despezas/{id}
+
+CRUD ProjecaoModel
+    - id                    Int @id @default (autoincrement())
+    - mes_projecao          Datetime(mês)
+    - saldo_inicial         Int
+    - entradas              Int
+    - saidas                Int
+    - saldo_final           Int
+
+    - POST /projecao
+    - GET /projecao
+    - GET /projecao/{id}
+    - PUT /projecao/{id}

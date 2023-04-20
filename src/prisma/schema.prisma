@@ -12,7 +12,7 @@ model FaturasModel {
   mes_fatura        String
   banco             Bancos
   dia_do_fechamento DateTime
-  dia_do_vencimento DateTime
+  dia_do_vencimento String
   
 }
 

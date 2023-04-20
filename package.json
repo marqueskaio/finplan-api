@@ -33,8 +33,8 @@
     "test:integration": "npm test -- --watchAll -c jest-integration-config.cjs",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
-    "db:generate": "cd node_modules/.prisma && prisma generate",
-    "db:push": "cd node_modules/.prisma && prisma db push",
+    "db:generate": "prisma generate --schema=./src/prisma/schema.prisma",
+    "db:push": "npx prisma db push",
     "db:test:generate": "dotenv -e .env.test prisma generate",
     "db:test:push": "dotenv -e .env.test prisma db push"
   },
