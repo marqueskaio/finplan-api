@@ -1,16 +1,17 @@
-import { FaturasModel } from "@prisma/client";
+import {ok} from "../../../helpers/http/http-helper";
 import { Controller } from "interfaces/controllers/Controller";
 import { HttpRequest } from "interfaces/http/http-request";
-import { PostFaturasRepositoryInterface } from "interfaces/repositories/post-faturas-repository-interface";
+import { UsecaseInterface } from "interfaces/usecases/usecase-interface";
 
 export class PostFaturasController implements Controller{
 
-    constructor(private readonly postFaturasUsecase: PostFaturasRepositoryInterface) {
+    constructor(private readonly postFaturasUsecase: UsecaseInterface) {
 
     }
 
-   async handle (httpRequest: HttpRequest): Promise<FaturasModel>{
+   async handle (httpRequest: HttpRequest): Promise<any>{
     const result = await this.postFaturasUsecase.execute(httpRequest.body)
     return ok(result)
    }
+
 }
