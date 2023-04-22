@@ -1,5 +1,5 @@
-import { FaturasModel } from "@prisma/client";
-import { PostFaturasRepositoryInterface } from "../../interfaces/repositories/faturas/post-faturas-repository-interface";
+import { Bancos, FaturasModel } from "@prisma/client";
+import { PostFaturasRepositoryInterface } from "../../../interfaces/repositories/faturas/post-faturas-repository-interface";
 import { PostFaturaUseCase } from "./post-faturas-usecase"
 
 
@@ -7,8 +7,9 @@ const faturasModel = (): FaturasModel => {
     return {
         id: 1,
         mes_fatura: "Janeiro",
-        dia_do_fechamento: "16/04/2023",
-        dia_do_vencimento: "23/04/2023"
+        banco: Bancos.ITAU,
+        dia_do_fechamento: new Date(23/4/2023),
+        dia_do_vencimento: new Date(30/4/2023)
     }
 }
 
@@ -28,12 +29,15 @@ describe('PostFaturasUsecase', ()=>{
         const spy = jest.spyOn(postFaturasRepositoryStub, 'save')
         await sut.execute({
             mes_fatura: "Janeiro",
-            dia_do_fechamento: "16/04/2023",
-            dia_do_vencimento: "23/04/2023"
+            banco: Bancos.ITAU,
+            dia_do_fechamento: new Date(23/4/2023),
+            dia_do_vencimento: new Date(30/4/2023)
         })
-        expect(spy).toHaveBeenCalledWith({mes_fatura: "Janeiro",
-        dia_do_fechamento: "16/04/2023",
-        dia_do_vencimento: "23/04/2023"})
+        expect(spy).toHaveBeenCalledWith({
+            mes_fatura: "Janeiro",
+            banco: Bancos.ITAU,
+            dia_do_fechamento: new Date(23/4/2023),
+            dia_do_vencimento: new Date(30/4/2023)})
     })
 
 })

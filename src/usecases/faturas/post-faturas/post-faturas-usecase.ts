@@ -1,6 +1,6 @@
 import { FaturasModel } from "@prisma/client";
-import { UsecaseInterface } from "../../interfaces/usecases/usecase-interface";
-import { PostFaturasRepositoryInterface } from "../../interfaces/repositories/faturas/post-faturas-repository-interface";
+import { UsecaseInterface } from "../../../interfaces/usecases/usecase-interface";
+import { PostFaturasRepositoryInterface } from "../../../interfaces/repositories/faturas/post-faturas-repository-interface";
 
 export class PostFaturaUseCase implements UsecaseInterface{
 
