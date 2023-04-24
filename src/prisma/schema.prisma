@@ -11,8 +11,8 @@ model FaturasModel {
   id                Int    @id @default(autoincrement())
   mes_fatura        String
   banco             Bancos
-  dia_do_fechamento String
-  dia_do_vencimento String
+  dia_do_fechamento DateTime
+  dia_do_vencimento DateTime
   
 }
 

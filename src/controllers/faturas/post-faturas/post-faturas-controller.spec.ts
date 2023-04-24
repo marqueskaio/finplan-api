@@ -8,13 +8,31 @@ describe('PostFaturasController', ()=>{
     test('Should return a fatura on success', async ()=>{
         class PostFaturasUseCaseStub implements UsecaseInterface{
             execute (): Promise<FaturasModel> {
-                return Promise.resolve({id: 1, mes_fatura: "Janeiro", banco: Bancos.NUBANK, dia_do_fechamento: '20/4/23', dia_do_vencimento: '23/4/23'})
+                return Promise.resolve({
+                    id: 1,
+                    mes_fatura: "Janeiro",
+                    banco: Bancos.ITAU,
+                    dia_do_fechamento: new Date(23/4/2023),
+                    dia_do_vencimento: new Date(30/4/2023)
+                })
             }
 
         }
         const postFaturasUseCaseStub = new PostFaturasUseCaseStub()
         const sut = new PostFaturasController(postFaturasUseCaseStub)
-        const result = await sut.handle({body:{id: 1, mes_fatura: "Janeiro", banco: Bancos.NUBANK, dia_do_fechamento: '20/4/23', dia_do_vencimento: '23/4/23'}})
-        expect(result).toEqual(ok({id: 1, mes_fatura: "Janeiro", banco: Bancos.NUBANK, dia_do_fechamento: '20/4/23', dia_do_vencimento: '23/4/23'}))
+        const result = await sut.handle({body:{
+            id: 1,
+            mes_fatura: "Janeiro",
+            banco: Bancos.ITAU,
+            dia_do_fechamento: new Date(23/4/2023),
+            dia_do_vencimento: new Date(30/4/2023)
+        }})
+        expect(result).toEqual(ok({
+            id: 1,
+            mes_fatura: "Janeiro",
+            banco: Bancos.ITAU,
+            dia_do_fechamento: new Date(23/4/2023),
+            dia_do_vencimento: new Date(30/4/2023)
+        }))
     })
 })

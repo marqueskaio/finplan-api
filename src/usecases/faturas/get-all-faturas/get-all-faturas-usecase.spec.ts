@@ -1,6 +1,6 @@
 import { Bancos, FaturasModel } from "@prisma/client"
-import { GetAllFaturasRepositoryInterface } from "interfaces/repositories/faturas/get-all-faturas-repository-interface"
-import { GetAllFaturasUsecase } from "/Users/Public/Documents/finplan-api/src/usecases/faturas/get-all-faturas/get-all-faturas-usecase"
+import { GetAllFaturasRepositoryInterface } from "interfaces/repositories/get-all-faturas-repository-interface"
+import { GetAllFaturasUsecase } from "./get-all-faturas-usecase"
 
 const faturasModel = (): FaturasModel => {
     return {
