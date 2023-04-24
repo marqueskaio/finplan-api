@@ -8,14 +8,17 @@
     "@types/express": "^4.17.17",
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.11",
+    "@types/supertest": "^2.0.12",
     "babel-cli": "^6.26.0",
     "babel-jest": "^29.5.0",
     "cross-spawn": "^7.0.3",
     "jest": "^29.5.0",
     "open-cli": "^7.2.0",
     "prisma": "^4.13.0",
+    "supertest": "^6.3.3",
     "ts-jest": "^29.1.0",
     "tslib": "^2.5.0",
+    "typescript": "^5.0.4",
     "yargs": "^17.7.1"
   },
   "dependencies": {
@@ -32,16 +35,15 @@
   "scripts": {
     "test": "jest",
     "test:verbose": "jest --passWithNoTests --runInBand",
-    "test:unit": "npm test -- --watchAll -c jest-unit-config.cjs",
-    "test:unit-verb": "npm test -- --watchAll -c jest-unit-config.cjs --verbose --silent=false",
-    "test:integration": "npm test -- --watchAll -c jest-integration-config.cjs",
+    "test:unit": "npm test -- --watch -c jest-unit-config.cjs",
+    "test:unit-verb": "npm test -- --watch -c jest-unit-config.cjs --verbose --silent=false",
+    "test:integration": "npm test -- --watch -c jest-integration-config.cjs",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
     "db:generate": "prisma generate --schema=./src/prisma/schema.prisma",
     "db:push": "npx prisma db push",
-    "db:test:generate": "dotenv -e .env.test prisma generate",
-    "db:test:push": "dotenv -e .env.test prisma db push"
-    
+    "db:test:generate": "prisma generate",
+    "db:test:push": "prisma db push"
   },
   "author": "",
   "license": "ISC",
