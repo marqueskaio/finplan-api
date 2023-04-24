@@ -1,16 +1,24 @@
 TN:
+<<<<<<< HEAD
 SF:src\controllers\faturas\post-faturas\post-faturas-controller.ts
+=======
+SF:src\usecases\faturas\get-all-faturas\get-all-faturas-usecase.ts
+>>>>>>> 9a43f586e296a7c57b66be5d118b8125af8d2fcd
 FN:8,(anonymous_0)
 FN:12,(anonymous_1)
 FNF:2
 FNH:2
 FNDA:1,(anonymous_0)
 FNDA:1,(anonymous_1)
+<<<<<<< HEAD
 DA:1,1
+=======
+>>>>>>> 9a43f586e296a7c57b66be5d118b8125af8d2fcd
 DA:6,1
 DA:8,1
 DA:13,1
 DA:14,1
+<<<<<<< HEAD
 LF:5
 LH:5
 BRF:0
@@ -71,6 +79,10 @@ DA:24,2
 DA:29,1
 LF:8
 LH:8
+=======
+LF:4
+LH:4
+>>>>>>> 9a43f586e296a7c57b66be5d118b8125af8d2fcd
 BRF:0
 BRH:0
 end_of_record
