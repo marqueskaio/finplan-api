@@ -2,10 +2,10 @@
 
 > ## APIs construídas no treinamento
 
-1. [CRUD](./faturas/)
-2. [CRUD](./receitas)
-3. [CRUD](./custos)
-4. [CRUD](./projecao)
+1. CRUD(./faturas/)
+2. CRUD(./receitas)
+3. CRUD(./custos)
+4. CRUD(./projecao)
 
 > ## Princípios
 
