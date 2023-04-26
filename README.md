@@ -21,10 +21,10 @@
 * Git
 * Jest
 * Swagger
-* Validator
+* Prisma
 * Express
 * Supertest
-* Husky
+
 
 > ## Features do Node
 
