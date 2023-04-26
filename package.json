@@ -35,9 +35,9 @@
   "scripts": {
     "test": "jest",
     "test:verbose": "jest --passWithNoTests --runInBand",
-    "test:unit": "npm test -- --watch -c jest-unit-config.cjs",
-    "test:unit-verb": "npm test -- --watch -c jest-unit-config.cjs --verbose --silent=false",
-    "test:integration": "npm test -- --watch -c jest-integration-config.cjs",
+    "test:unit": "npm test -- --watch -c jest-unit-config.js",
+    "test:unit-verb": "npm test -- --watch -c jest-unit-config.js --verbose --silent=false",
+    "test:integration": "npm test -- --watch -c jest-integration-config.js",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
     "db:generate": "prisma generate --schema=./src/prisma/schema.prisma",
@@ -45,7 +45,8 @@
     "db:test:generate": "prisma generate",
     "db:test:push": "prisma db push"
   },
-  "author": "",
+  "author": "kaio.marques <marques.kaio16@gmail.com>",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "repository": "https://github.com/marqueskaio/finplan-api.git"
 }
